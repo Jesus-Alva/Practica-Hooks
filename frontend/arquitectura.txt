@@ -1,0 +1,51 @@
+.
+├── app
+│   ├── constants
+│   │   ├── content.txt
+│   │   └── routes.ts
+│   ├── dashboard
+│   │   └── page.tsx
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── arquitectura.txt
+├── components
+│   ├── features
+│   │   └── content.txt
+│   ├── forms
+│   │   └── content.txt
+│   ├── layouts
+│   │   ├── content.txt
+│   │   └── navbarComponent.tsx
+│   └── ui
+│       └── conent.txt
+├── Dockerfile
+├── Dockerfile-production
+├── eslint.config.mjs
+├── lib
+│   ├── schemas
+│   │   └── user.ts
+│   └── services
+│       └── authService.ts
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── pages
+│   └── content.txt
+├── postcss.config.mjs
+├── public
+│   ├── content.txt
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── images
+│   │   └── banner_1.jpg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
+
+15 directories, 34 files

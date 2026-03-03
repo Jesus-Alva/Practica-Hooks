@@ -8,17 +8,13 @@
 
 ### 📋 Tabla de Contenidos
 
-- [🏗️ 1. Componente de Página (App Router)](#-🏗️-1.-Componente-de-Página-(App-Router))
-- [Instalación](#-instalación)
-- [Uso](#-uso)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [API](#-api)
-- [Despliegue](#-despliegue)
-- [Tecnologías](#-tecnologías)
-- [Contribución](#-contribución)
-- [Licencia](#-licencia)
-- [Autores](#-autores)
-
+- [🏗️ 1. Componente de Página (App Router)](#🏗️-1-componente-de-página-app-router)
+- [🔧 2. Componente Reutilizable](#🔧-2-componente-reutilizable)
+- [📦 3. Estructura Completa con Data Fetching](#📦-3-estructura-completa-con-data-fetching)
+- [🎯 4. Client Component con Contexto](#🎯-4-client-component-con-contexto)
+- [📋 Consejos de Estructuración](#📋-consejos-de-estructuración)
+- [📦 Instalación local](#📦-instalación-local)
+- [📁 Estructura de Carpetas Recomendada](#📁-estructura-de-carpetas-recomendada)
 
 ## 🏗️ 1. Componente de Página (App Router)
 
@@ -233,6 +229,17 @@ Regresamos a raiz para reconstruir y levantar los servicios
 cd ..
 
 docker compose up --build
+```
+
+## Errores comunes
+# Error de instalación de next-intl
+>En algunos casos, next-intl puede tener error de permisos para su instalacion, debido a que el usuario que creo el proyecto no es el mismo, no cuenta con los mismos permisos de creacion, para solucionarlo, debemos asignar los permisos al usuario actual meidante el comando:
+``` 
+sudo chown -R $(whoami):$(whoami) /home/user/Architecture-FastAPI/frontend
+``` 
+seguido de la instalación de next-intl
+```
+npm install next-intl
 ```
 
 ## 📁 Estructura de Carpetas Recomendada

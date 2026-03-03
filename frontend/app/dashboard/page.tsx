@@ -3,8 +3,11 @@ import Image from "next/image";
 
 import { ROUTES_IMAGES } from "../constants/routes";
 import NavbarComponent from "../../components/layouts/navbarComponent";
+import { useTranslation } from "../../lib/hooks/useTranslation";
 
 const Page: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
             {/* Header simple */}
@@ -28,13 +31,13 @@ const Page: React.FC = () => {
                 {/* Contenido del dashboard */}
                 <div className="relative z-10 text-center text-white px-4">
                     <h2 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
-                        Subgerencia de Desarrollo
+                        {t('dashboardTitle')}
                     </h2>
                     <p className="text-2xl md:text-4xl font-light mb-12 drop-shadow-lg">
-                        Programas Informáticos
+                        {t('dashboardSubtitle')}
                     </p>
 
-                    
+
                 </div>
             </section>
 
@@ -42,23 +45,23 @@ const Page: React.FC = () => {
             {/* Hero Section */}
             <section id="tecnologias" className="container mx-auto px-4 py-16 text-center">
                 <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-                    Next.js + Tailwind + TypeScript
+                    {t('heroTitle')}
                 </h1>
                 <h2 className="text-3xl md:text-4xl font-semibold text-gray-700 mb-6">
-                    + Docker + PostgreSQL
+                    {t('heroSubtitle')}
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                    Arquitectura base para inicializar proyectos modernos con las mejores herramientas del ecosistema.
+                    {t('heroDescription')}
                 </p>
                 <div className="flex justify-center space-x-4">
                     <span className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium shadow-lg hover:bg-blue-700 transition cursor-default">
-                        Frontend
+                        {t('badgeFrontend')}
                     </span>
                     <span className="px-6 py-3 bg-green-600 text-white rounded-lg font-medium shadow-lg hover:bg-green-700 transition cursor-default">
-                        Backend
+                        {t('badgeBackend')}
                     </span>
                     <span className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium shadow-lg hover:bg-purple-700 transition cursor-default">
-                        DevOps
+                        {t('badgeDevops')}
                     </span>
                 </div>
             </section>
@@ -66,7 +69,7 @@ const Page: React.FC = () => {
             {/* Tecnologías Section */}
             <section className="container mx-auto px-4 py-12">
                 <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-                    Tecnologías Utilizadas
+                    {t('technologiesHeading')}
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -137,51 +140,50 @@ const Page: React.FC = () => {
             <section className="bg-white py-16 mt-8">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
-                        ¿Por qué esta arquitectura?
+                        {t('whyHeading')}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div className="text-center p-4">
                             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-3xl">⚡</span>
                             </div>
-                            <h3 className="font-semibold text-xl mb-2 text-black">Rendimiento</h3>
-                            <p className="text-gray-600">Next.js y FastAPI ofrecen velocidad y optimización.</p>
+                            <h3 className="font-semibold text-xl mb-2 text-black">{t('adv_performance_title')}</h3>
+                            <p className="text-gray-600">{t('adv_performance_desc')}</p>
                         </div>
                         <div className="text-center p-4">
                             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-3xl">🔒</span>
                             </div>
-                            <h3 className="font-semibold text-xl mb-2 text-black">Seguridad</h3>
-                            <p className="text-gray-600">TypeScript, autenticación JWT y rate limiting.</p>
+                            <h3 className="font-semibold text-xl mb-2 text-black">{t('adv_security_title')}</h3>
+                            <p className="text-gray-600">{t('adv_security_desc')}</p>
                         </div>
                         <div className="text-center p-4">
                             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-3xl">🐳</span>
                             </div>
-                            <h3 className="font-semibold text-xl mb-2 text-black">Portabilidad</h3>
-                            <p className="text-gray-600">Docker garantiza entornos consistentes.</p>
+                            <h3 className="font-semibold text-xl mb-2 text-black">{t('adv_portability_title')}</h3>
+                            <p className="text-gray-600">{t('adv_portability_desc')}</p>
                         </div>
                         <div className="text-center p-4">
                             <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-3xl">📦</span>
                             </div>
-                            <h3 className="font-semibold text-xl mb-2 text-black">Escalabilidad</h3>
-                            <p className="text-gray-600">Preparado para crecer con tu proyecto.</p>
+                            <h3 className="font-semibold text-xl mb-2 text-black">{t('adv_scalability_title')}</h3>
+                            <p className="text-gray-600">{t('adv_scalability_desc')}</p>
                         </div>
                     </div>
                 </div>
             </section>
 
 
-
             {/* Footer */}
             <footer className="bg-gray-800 text-white py-8">
                 <div className="container mx-auto px-4 text-center">
                     <p className="text-gray-300">
-                        © 2025 - Arquitectura Base con Next.js, Tailwind, TypeScript, Docker y PostgreSQL
+                        {t('footer_line1')}
                     </p>
                     <p className="text-gray-400 text-sm mt-2">
-                        Diseñado para iniciar proyectos con el pie derecho.
+                        {t('footer_line2')}
                     </p>
                 </div>
             </footer>
