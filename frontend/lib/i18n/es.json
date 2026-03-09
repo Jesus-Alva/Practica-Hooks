@@ -1,0 +1,27 @@
+{
+  "appName": "Arquitectura Base",
+  "inicio": "Inicio",
+  "tecnologias": "Tecnologías",
+  "documentacion": "Documentación"
+  ,
+  "dashboardTitle": "Subgerencia de Desarrollo",
+  "dashboardSubtitle": "Programas Informáticos",
+  "heroTitle": "Next.js + Tailwind + TypeScript",
+  "heroSubtitle": "+ Docker + PostgreSQL",
+  "heroDescription": "Arquitectura base para inicializar proyectos modernos con las mejores herramientas del ecosistema.",
+  "badgeFrontend": "Frontend",
+  "badgeBackend": "Backend",
+  "badgeDevops": "DevOps",
+  "technologiesHeading": "Tecnologías Utilizadas",
+  "whyHeading": "¿Por qué esta arquitectura?",
+  "adv_performance_title": "Rendimiento",
+  "adv_performance_desc": "Next.js y FastAPI ofrecen velocidad y optimización.",
+  "adv_security_title": "Seguridad",
+  "adv_security_desc": "TypeScript, autenticación JWT y rate limiting.",
+  "adv_portability_title": "Portabilidad",
+  "adv_portability_desc": "Docker garantiza entornos consistentes.",
+  "adv_scalability_title": "Escalabilidad",
+  "adv_scalability_desc": "Preparado para crecer con tu proyecto.",
+  "footer_line1": "© 2025 - Arquitectura Base con Next.js, Tailwind, TypeScript, Docker y PostgreSQL",
+  "footer_line2": "Diseñado para iniciar proyectos con el pie derecho."
+}
