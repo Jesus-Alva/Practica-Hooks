@@ -10,31 +10,7 @@ const Page: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-            <NavbarComponent />
-
-            {/* <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
-                <div className="absolute inset-4 top-0 left-0 w-full h-full z-0">
-                    <Image
-                        src={ROUTES_IMAGES.dashboard}
-                        alt="Programming background"
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                    <div className="absolute inset-0 bg-black/50 bg-opacity-60"></div>
-                </div>
-                <div className="relative z-10 text-center text-white px-4">
-                    <h2 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
-                        {t('dashboardTitle')}
-                    </h2>
-                    <p className="text-2xl md:text-4xl font-light mb-12 drop-shadow-lg">
-                        {t('dashboardSubtitle')}
-                    </p>
-
-
-                </div>
-            </section> */}
+        <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
 
             <section className="container mx-auto px-4 py-16 text-center">
                 <UseStateHook></UseStateHook>
