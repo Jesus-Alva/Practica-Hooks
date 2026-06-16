@@ -27,7 +27,7 @@ const BasicCounter: React.FC = () => {
 }
 
 export default BasicCounter;
-        `;
+    `;
 
     return (
         <div className="border border-gray-200 flex align-middle">

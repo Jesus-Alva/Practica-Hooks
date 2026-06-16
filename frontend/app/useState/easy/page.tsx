@@ -4,11 +4,11 @@ import { useState } from "react";
 
 import BasicCounter from "../../../components/features/UseState/easy/BasicCounter";
 import ToggleButton from "../../../components/features/UseState/easy/ToggleButton";
+import Form from "../../../components/features/UseState/easy/Form";
 
 
 const Page: React.FC = () => {
-    //#3
-    const [texto, setTexto] = useState("")
+
     //#4
     const [tareas, setTareas] = useState<string[]>([])
     const [nuevo, setNuevo] = useState<string>("")
@@ -27,18 +27,7 @@ const Page: React.FC = () => {
 
                 <ToggleButton />
 
-                <div className="border border-gray-200">
-                    <div className="flex flex-col w-1/3 mx-auto py-4">
-                        <span className="text-3xl md:text-xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-                            Hook: useState #3 Text: Formulario Controlado
-                        </span>
-                        <input type="text"
-                            value={texto}
-                            onChange={(e) => { setTexto(e.target.value) }}
-                            className="text-gray-600 border border-gray-300 rounded-xl shadow-xs shadow-gray-300 p-2" />
-                        <span className="text-gray-500">{texto}</span>
-                    </div>
-                </div>
+                <Form />
 
                 <div className="border border-gray-200">
                     <div className="flex flex-col w-1/3 mx-auto space-y-2 py-4">

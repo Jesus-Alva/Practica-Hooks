@@ -56,7 +56,7 @@ export default ToggleButton;
                 </div>
 
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 m-5">
                 <CodeBlock code={codeTxt} language="javascript"/>
             </div>
         </div>
