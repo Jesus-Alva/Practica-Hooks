@@ -31,7 +31,7 @@ export default BasicCounter;
         <div className="border border-gray-200 flex align-middle">
             <div className="flex flex-col w-1/2 m-auto py-4">
                 <span className="text-3xl md:text-xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-                    Hook: useState #3 Text: Formulario Controlado
+                    Hook #3: useState type Text: Formulario Controlado
                 </span>
                 <input type="text"
                     value={texto}

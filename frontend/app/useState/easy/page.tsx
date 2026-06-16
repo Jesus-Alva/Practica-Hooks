@@ -5,6 +5,7 @@ import { useState } from "react";
 import BasicCounter from "../../../components/features/UseState/easy/BasicCounter";
 import ToggleButton from "../../../components/features/UseState/easy/ToggleButton";
 import Form from "../../../components/features/UseState/easy/Form";
+import TaskList from "../../../components/features/UseState/easy/TaskList";
 
 
 const Page: React.FC = () => {
@@ -29,25 +30,8 @@ const Page: React.FC = () => {
 
                 <Form />
 
-                <div className="border border-gray-200">
-                    <div className="flex flex-col w-1/3 mx-auto space-y-2 py-4">
-                        <span className="text-3xl md:text-xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-                            Hook: useState #4 Array: Lista de Tareas Simple
-                        </span>
-                        <input type="text" value={nuevo} onChange={(e) => { setNuevo(e.target.value) }} className="text-gray-600 border border-gray-300 rounded-xl shadow-xs shadow-gray-300 p-2" />
-                        <button onClick={agregar}
-                            className="border border-gray-300 rounded-xl shadow-xs text-gray-800 p-2 bg-linear-to-r from-purple-400 via-pink-400 to-orange-400 hover:from-orange-400 hover:via-pink-400 hover:to-purple-400 hover:text-white transform-color duration-400 font-bold">
-                            Agregar Tarea Nueva
-                        </button>
-                        <ul className="text-gray-400">
-                            {tareas.map((tarea, index) => (
-                                <li key={index}>
-                                    {tarea}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
+                <TaskList />
+
             </div>
         </div>
     )
