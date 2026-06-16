@@ -3,6 +3,7 @@ export const ROUTES_IMAGES = {
 } as const;
 
 export const ROUTES_NAVBAR = {
+    title: "Practica de Hooks",
     navBar:[
       {
         href: "/",

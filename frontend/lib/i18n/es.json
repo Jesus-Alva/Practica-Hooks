@@ -1,48 +1,6 @@
 {
   "global": {
-    "titleApp": "Hooks Training",
-    "navBar":[
-      {
-        "href": "/",
-        "title": "Inicio"
-      },
-      {
-        "href": "/useState",
-        "title": "useState",
-        "downBar": [
-          {
-            "href": "/useState/easy",
-            "title": "easy"
-          },
-          {
-            "href": "/useState/middle",
-            "title": "middle"
-          },
-          {
-            "href": "/useState/hard",
-            "title": "hard"
-          }
-        ]
-      },
-      {
-        "href": "/useEffect",
-        "title": "useEffect",
-        "downBar": [
-          {
-            "href": "/useEffect/easy",
-            "title": "easy"
-          },
-          {
-            "href": "/useEffect/middle",
-            "title": "middle"
-          },
-          {
-            "href": "/useEffect/hard",
-            "title": "hard"
-          }
-        ]
-      }
-    ]
+    "titleApp": "Practica de Hooks"
   },
   "dashboard":{
 

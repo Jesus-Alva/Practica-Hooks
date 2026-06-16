@@ -5,10 +5,14 @@ import { useTranslation } from "../../lib/hooks/useTranslation";
 import { useLang } from "../../lib/i18n/LanguageProvider";
 import { ROUTES_NAVBAR } from "../../app/constants/routes";
 
+import { navBar } from "../../types/navBar";
+
 const NavbarComponent: React.FC = () => {
   const { t } = useTranslation();
   const { locale, setLocale } = useLang();
   const navBarData = ROUTES_NAVBAR.navBar;
+
+  const globalData = t("global", { returnObjects: true }) as navBar;
 
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
   const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -37,7 +41,7 @@ const NavbarComponent: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg"></div>
-          <span className="font-bold text-xl text-gray-800">{t('appName')}</span>
+          <span className="font-bold text-xl text-gray-800">{globalData.titleApp}</span>
         </div>
 
         <div className="flex items-center space-x-6">

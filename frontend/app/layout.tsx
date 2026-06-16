@@ -7,7 +7,9 @@ import NavbarComponent from '../components/layouts/navbarComponent';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {title: 'Base Architecture',description: 'Proyecto que incluye la arquitectura basica para reutilización en los aplicativos',
+export const metadata: Metadata = {
+  title: 'Practice Hooks',
+  description: 'Proyecto que incluye la arquitectura basica para reutilización en los aplicativos',
 }
 
 export default function RootLayout({
