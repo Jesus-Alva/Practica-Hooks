@@ -3,12 +3,10 @@
 import { useState } from "react";
 
 import BasicCounter from "../../../components/features/UseState/easy/BasicCounter";
+import ToggleButton from "../../../components/features/UseState/easy/ToggleButton";
 
 
 const Page: React.FC = () => {
-    
-    //#2
-    const [on, setOn] = useState(true)
     //#3
     const [texto, setTexto] = useState("")
     //#4
@@ -25,36 +23,9 @@ const Page: React.FC = () => {
     return (
         <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
             <div className="container mx-auto px-4 py-16 text-center">
-                <BasicCounter></BasicCounter>
-        
-                <div className="border border-gray-200">
-                    <div className="flex flex-col w-1/3 mx-auto py-4">
-                        <span className="text-3xl md:text-xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-                            Hook: useState #2 Boolean: Toggle (interruptor)
-                        </span>
-                        <div
-                            onClick={() => setOn(!on)}
-                            className={`
-                            relative w-20 h-10 rounded-full cursor-pointer transition-all duration-300 mx-auto
-                            ${on ? 'bg-green-400 shadow-inner' : 'bg-gray-300 shadow-inner'}
-                        `}
-                        >
-                            <div
-                                className={`
-                        absolute top-0.5 left-0.5 w-9 h-9 bg-white rounded-full shadow-md
-                        transition-all duration-300 transform
-                        ${on ? 'translate-x-10' : 'translate-x-0'}
-                        `}
-                            />
+                <BasicCounter />
 
-                            <span className="absolute inset-0 flex items-center justify-between px-3 text-xs font-bold text-gray-600">
-                                <span className={on ? 'text-white' : 'text-gray-300'}>ON</span>
-                                <span className={!on ? 'text-white' : 'text-gray-300'}>OFF</span>
-                            </span>
-                        </div>
-
-                    </div>
-                </div>
+                <ToggleButton />
 
                 <div className="border border-gray-200">
                     <div className="flex flex-col w-1/3 mx-auto py-4">
