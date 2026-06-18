@@ -6,6 +6,65 @@
 
   },
   "useState": {
-    
+    "easy": {
+      "products": [
+        {
+          "id": 1,
+          "name": "Teclado",
+          "price": 50,
+          "stock": 15,
+          "images": [
+            {
+              "idImg": "1",
+              "src": "/images/products/keyboard-1.png",
+              "alt": "Imagen de Teclado"
+            },
+            {
+              "idImg": "2",
+              "src": "/images/products/keyboard-2.png",
+              "alt": "Imagen de Teclado"
+            },
+            {
+              "idImg": 3,
+              "src": "/images/products/keyboard-3.png",
+              "alt": "Imagen de Teclado"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Computadora XPG",
+          "price": 9999.00,
+          "stock": 10,
+          "images": [
+            {
+              "idImg": "1",
+              "src": "/images/products/pc-1.png",
+              "alt": "Imagen de PC"
+            },
+            {
+              "idImg": "2",
+              "src": "/images/products/pc-2.png",
+              "alt": "Imagen de PC"
+            },
+            {
+              "idImg": "3",
+              "src": "/images/products/pc-2.png",
+              "alt": "Imagen de PC"
+            },
+            {
+              "idImg": "4",
+              "src": "/images/products/pc-4.png",
+              "alt": "Imagen de PC"
+            },
+            {
+              "idImg": "5",
+              "src": "/images/products/pc-5.png",
+              "alt": "Imagen de PC"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

@@ -1,25 +1,15 @@
 'use client'
 
 import { useState } from "react";
+import { useTranslation } from "../../../lib/hooks/useTranslation";
 
 import BasicCounter from "../../../components/features/UseState/easy/BasicCounter";
 import ToggleButton from "../../../components/features/UseState/easy/ToggleButton";
 import Form from "../../../components/features/UseState/easy/Form";
-import TaskList from "../../../components/features/UseState/easy/TaskList";
 
 
 const Page: React.FC = () => {
 
-    //#4
-    const [tareas, setTareas] = useState<string[]>([])
-    const [nuevo, setNuevo] = useState<string>("")
-
-    const agregar = () => {
-        if (nuevo.trim()) {
-            setTareas([...tareas, nuevo]);
-            setNuevo("");
-        }
-    }
 
     return (
         <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
@@ -29,9 +19,6 @@ const Page: React.FC = () => {
                 <ToggleButton />
 
                 <Form />
-
-                <TaskList />
-
             </div>
         </div>
     )
