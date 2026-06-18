@@ -14,6 +14,7 @@ type ProductWithQuantity = products & { quantity: number }
 
 const ShoppingCart: React.FC<ComponentProps> = ({ data }) => {
     const [showModal, setShowModal] = useState(false)
+    const [total, setTotal] = useState(0)
     const [imageIndices, setImageIndices] = useState<{ [key: number]: number }>({});
 
     const handlePrev = (productId: number, total: number, e: React.MouseEvent) => {
@@ -48,13 +49,43 @@ const ShoppingCart: React.FC<ComponentProps> = ({ data }) => {
                     item.id === product.id
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
-                    
                 );
             } else {
                 return [...prevCarrito, { ...product, quantity: 1 }];
             }
         })
     }
+
+    const incrementarProducto = (id: products["id"]) => {
+        setCarrito((prevCarrito) => {
+            const producto = prevCarrito.find((item) => item.id === id);
+            if (!producto) return prevCarrito;
+            if (producto.quantity >= producto.stock) {
+                return prevCarrito;
+            }
+            return prevCarrito.map((item) =>
+                item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+            );
+        })
+    }
+
+    const decrementarProducto = (id: products["id"]) => {
+        setCarrito((prevCarrito) => {
+            const producto = prevCarrito.find((item) => item.id === id);
+            if (!producto) return prevCarrito;
+            if (producto.quantity <= 1) {
+                return prevCarrito.filter((item) => item.id !== id);
+            }
+            return prevCarrito.map((item) =>
+                item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+            );
+        })
+    }
+
+    const totalPrice = carrito.reduce(
+        (acumulador, item) => acumulador + item.price * item.quantity,
+        0
+    );
 
     const codeTxt = `
     // Código de ejemplo
@@ -70,40 +101,45 @@ const ShoppingCart: React.FC<ComponentProps> = ({ data }) => {
                     <div className="w-full border border-gray-200 shadow-md shadow-gray-200 m-auto">
                         <div className="relative container flex justify-between p-4">
                             <span className="text-black my-auto">Carrito de compras</span>
-                            <button onClick={() => setShowModal(!showModal)}  className="w-10 h-10 text-center hover:cursor-pointer hover:shadow-md transform duration-300 rounded-sm border border-gray-200">
+                            <button onClick={() => setShowModal(!showModal)} className="w-10 h-10 text-center hover:cursor-pointer hover:shadow-md transform duration-300 rounded-sm border border-gray-200">
                                 <FaCartShopping className="text-gray-400 mx-auto w-6 h-6" />
                             </button>
                             {showModal && (
                                 <div className="absolute right-0 top-full mt-2 w-80 h-auto bg-white shadow-xl rounded-md overflow-hidden z-20">
-                                {carrito.length === 0 ? (
-                                    <span className="text-gray-600">Carrito Vacio</span>
-                                ) : (
-                                    <ul className="divide-y divide-gray-300 px-4">
-                                        {carrito.map((currentProduct, index) => (
-                                            <li key={index} className="  text-gray-600 h-20 flex justify-between align-middle">
-                                                <div className="relative w-20 h-20 overflow-hidden">
-                                                    <Image
-                                                        key={currentProduct.images[0].idImg}
-                                                        src={currentProduct.images[0].src}
-                                                        alt={currentProduct.images[0].src}
-                                                        fill
-                                                        className="absolute object-contain p-1 w-max-25 h-auto"
-                                                    />
-                                                </div>
-                                                <span className="my-auto mr-auto">{currentProduct.name}</span>
-                                                <div className="grid grid-cols-1">
-                                                    <button className="text-white font-bold cursor-pointer mx-2 w-5 m-auto border border-gray-300 rounded bg-linear-to-b from-red-700 via-red-500 to-red-300 hover:scale-105 transform duration-300">^</button>
-                                                    <span className="text-xs font-light my-auto rounded border border-gray-300">{currentProduct.quantity}</span>
-                                                    <button className="text-white font-bold cursor-pointer mx-2 w-5 m-auto rotate-180 border border-gray-300 rounded bg-linear-to-b from-red-700 via-red-500 to-red-300 hover:scale-105 transform duration-300">^</button>
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
+                                    {carrito.length === 0 ? (
+                                        <span className="text-gray-600">Carrito Vacio</span>
+                                    ) : (
+                                        <ul className="divide-y divide-gray-300 px-4">
+                                            {carrito.map((currentProduct, index) => (
+                                                <li key={index} className="  text-gray-600 h-20 flex justify-between align-middle">
+                                                    <div className="relative w-20 h-20 overflow-hidden">
+                                                        <Image
+                                                            key={currentProduct.images[0].idImg}
+                                                            src={currentProduct.images[0].src}
+                                                            alt={currentProduct.images[0].src}
+                                                            fill
+                                                            className="absolute object-contain p-1 w-max-25 h-auto"
+                                                        />
+                                                    </div>
+                                                    <span className="my-auto mr-auto">{currentProduct.name}</span>
+                                                    <div className="grid grid-cols-1">
+                                                        <button onClick={() => incrementarProducto(currentProduct.id)} className="text-white font-bold cursor-pointer mx-2 w-5 m-auto border border-gray-300 rounded bg-linear-to-b from-red-700 via-red-500 to-red-300 hover:scale-105 transform duration-300">^</button>
+                                                        <span className="text-xs font-light my-auto rounded border border-gray-300">{currentProduct.quantity}</span>
+                                                        <button onClick={() => decrementarProducto(currentProduct.id)} className="text-white font-bold cursor-pointer mx-2 w-5 m-auto rotate-180 border border-gray-300 rounded bg-linear-to-b from-red-700 via-red-500 to-red-300 hover:scale-105 transform duration-300">^</button>
+                                                    </div>
+                                                    
+                                                </li>
+                                            ))}
+                                            <div className="">
+                                                <span className="text-gray-600">Total: </span>
+                                                <span className="font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">{totalPrice}</span>
+                                            </div>
+                                        </ul>
+                                    )}
 
-                            </div>
+                                </div>
                             )}
-                            
+
                         </div>
 
                     </div>

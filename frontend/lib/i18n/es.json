@@ -11,7 +11,7 @@
         {
           "id": 1,
           "name": "Teclado",
-          "price": 50,
+          "price": 679.9,
           "stock": 15,
           "images": [
             {
@@ -34,7 +34,7 @@
         {
           "id": 2,
           "name": "Computadora XPG",
-          "price": 9999.00,
+          "price": 9999.90,
           "stock": 10,
           "images": [
             {
