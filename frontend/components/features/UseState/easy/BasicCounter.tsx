@@ -41,7 +41,7 @@ export default BasicCounter;
                 </button>
                 <p className="text-green-600/50 font-bold m-5 rounded text-2xl mx-auto">{contador}</p>
             </div>
-            <div className="w-1/2 m-5">
+            <div className="w-1/2 m-5 rounded-xl shadow-lg shadow-[#0a0e14]/50 ">
                 <CodeBlock code={codeTxt} language="javascript" />
             </div>
 

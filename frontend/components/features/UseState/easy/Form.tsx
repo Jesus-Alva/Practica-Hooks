@@ -40,7 +40,7 @@ export default BasicCounter;
                     className="text-gray-600 w-1/2 mx-auto border border-gray-300 rounded-xl shadow-xs shadow-gray-300 p-2" />
                 <span className="text-gray-500 py-2">{texto}</span>
             </div>
-            <div className="w-1/2 m-5">
+            <div className="w-1/2 m-5 rounded-xl shadow-lg shadow-[#0a0e14]/50">
                 <CodeBlock code={codeTxt} language="javascript" />
             </div>
         </div>

@@ -67,7 +67,7 @@ export default BasicCounter;
                     ))}
                 </ul>
             </div>
-            <div className="w-1/2 m-5">
+            <div className="w-1/2 m-5 rounded-xl shadow-lg shadow-[#0a0e14]/50">
                 <CodeBlock code={codeTxt} language="javascript" />
             </div>
         </div>

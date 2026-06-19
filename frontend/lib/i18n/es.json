@@ -2,8 +2,86 @@
   "global": {
     "titleApp": "Practica de Hooks"
   },
-  "dashboard":{
-
+  "dashboard": {
+    "init": {
+      "title": "Aprende React y Next.js con Hooks: Guía de ejercicios practicos",
+      "description": "Los Hooks son funciones que te permiten “enganchar” el estado y el ciclo de vida de React dentro de componentes funcionales. Antes de ellos, solo las clases podían manejar estado o efectos; ahora, con hooks como useState, useEffect, useContext y muchos más, los componentes funcionales pueden hacer exactamente lo mismo de forma más sencilla y reutilizable."
+    },
+    "hooks": {
+      "title": "¿Qué son los Hooks?",
+      "description": [
+        "Los Hooks son funciones que te permiten “enganchar” el estado y el ciclo de vida de React dentro de componentes funcionales.",
+        "Antes de ellos, solo las clases podían manejar estado o efectos; ahora, con hooks como useState, useEffect, useContext y muchos más, los componentes funcionales pueden hacer exactamente lo mismo de forma más sencilla y reutilizable."
+      ]
+    },
+    "levels": {
+      "title": "¿Cómo están organizados los ejercicios?",
+      "description": "Cada hook se presenta con 3 niveles de dificultad:",
+      "level": [
+        {
+          "type": "Fácil",
+          "description": "Para dominar la sintaxis y los conceptos básicos."
+        },
+        {
+          "type": "Medio",
+          "description": "Problemas más realistas que combinan lógica y dependencias."
+        },
+        {
+          "type": "Difícil",
+          "description": "Ejercicios inspirados en aplicaciones reales, listos para producción."
+        }
+      ]
+    },
+    "practice": {
+      "title": "¿Qué vas a practicar?",
+      "hooksList": [
+        {
+          "type": "Hooks fundamentales:",
+          "typeList": [
+            "useState",
+            "useEffect",
+            "useContext",
+            "useRef",
+            "useReducer"
+          ]
+        },
+        {
+          "type": "Hooks de optimización:",
+          "typeList": [
+            "useMemo", 
+            "useCallback"
+          ]
+        },
+        {
+          "type": "Hooks personalizados (custom hooks):",
+          "typeList": ["extraerás lógica reutilizable"]
+        },
+        {
+          "type": "Hooks de Next.js (App Router):",
+          "typeList": [
+            "useRouter",
+            "usePathname",
+            "useSearchParams",
+            "useParams"
+          ]
+        }
+      ]
+    },
+    "rules": {
+      "title": "Reglas de los Hooks (importante)",
+      "description": "Recuerda siempre estas dos reglas al trabajar con hooks:",
+      "rule": [
+        "Solo se llaman en el nivel superior de tu componente o custom hook. No los pongas dentro de condicionales, bucles o funciones anidadas.",
+        "Solo se llaman desde funciones de React: componentes funcionales o tus propios custom hooks."
+      ]
+    },
+    "start": {
+      "title": "¿Listo para empezar?",
+      "description": [
+        "Elige un hook, resuelve los ejercicios y experimenta modificando el código. La mejor manera de aprender es escribir, romper y arreglar cosas.",
+        "Cuando te sientas cómodo, intenta combinar varios hooks en un mismo componente… ¡así es como se construyen las aplicaciones de verdad!"
+      ]
+    }
   },
   "useState": {
     "easy": {
@@ -34,7 +112,7 @@
         {
           "id": 2,
           "name": "Computadora XPG",
-          "price": 9999.90,
+          "price": 9999.9,
           "stock": 10,
           "images": [
             {

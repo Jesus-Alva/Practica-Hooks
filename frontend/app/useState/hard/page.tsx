@@ -10,7 +10,7 @@ const Page: React.FC = () => {
     
     const shoppindCartData = t('useState.easy.products', {returnObjects: true}) as products[];
     return (
-        <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
+        <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-300">
             <div className="container mx-auto px-4 py-16 text-center">
                 <ShoppingCart data={shoppindCartData} />
             </div>

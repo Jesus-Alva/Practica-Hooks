@@ -6,7 +6,6 @@ import { useLang } from "../../lib/i18n/LanguageProvider";
 import { ROUTES_NAVBAR } from "../../app/constants/routes";
 
 import { navBar } from "../../types/navBar";
-import Link from "next/link";
 
 const NavbarComponent: React.FC = () => {
   const { t } = useTranslation();
@@ -58,14 +57,14 @@ const NavbarComponent: React.FC = () => {
     <header className="fixed top-0 left-0 w-full z-50 border-b border-[#1f2826] bg-[#0a0e0f]/90 backdrop-blur-sm font-mono">
       <nav className="container mx-auto px-4 max-w-4xl flex items-center justify-between py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+        <a href="/" className="flex items-center gap-2.5 shrink-0">
           <span className="flex h-7 w-7 items-center justify-center rounded border border-[#1f2826] bg-[#101516] text-sm font-bold text-[#5eead4]">
             {'>'}
           </span>
           <span className="font-bold text-[15px] text-[#d4d8d6] tracking-tight">
             {globalData.titleApp}
           </span>
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">

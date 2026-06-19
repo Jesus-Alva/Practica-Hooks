@@ -1,7 +1,11 @@
 'use client';
+import Image from "next/image";
+import UseStateHook from "../../components/features/dashboard/UseStateHook";
 
 import { dashboard } from "../../types/dashboard";
 
+import { ROUTES_IMAGES } from "../constants/routes";
+import NavbarComponent from "../../components/layouts/navbarComponent";
 import { useTranslation } from "../../lib/hooks/useTranslation";
 
 const Page: React.FC = () => {
@@ -16,22 +20,22 @@ const Page: React.FC = () => {
 
             {/* Hero */}
             <section className="container mx-auto px-4 pt-24 pb-20 text-center">
-                <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-[#1e2530] bg-[#0f1419] text-xs text-white">
+                <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-[#1e2530] bg-[#0f1419] text-xs text-[#5f6b7a]">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     react-hooks-guide
                 </div>
 
                 <div className="flex flex-wrap items-baseline justify-center gap-x-3 gap-y-2">
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-400 my-auto">
+                    <h1 className="text-3xl md:text-4xl font-bold text-[#5f6b7a]">
                         {title[0]}:
                     </h1>
-                    <h1 className="text-4xl md:text-5xl uppercase tracking-tight font-extrabold bg-linear-to-b from-teal-400 via-esmerald-500 to-emerald-300 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl uppercase tracking-tight font-extrabold text-emerald-400">
                         {title[1]}
-                        <span className="inline-block w-[0.25ch] ml-1 bg-emerald-400 animate-pulse duration-75">&nbsp;</span>
+                        <span className="inline-block w-[0.5ch] ml-1 bg-emerald-400 animate-[blink_1s_steps(1)_infinite]">&nbsp;</span>
                     </h1>
                 </div>
 
-                <p className="mt-6 max-w-xl mx-auto text-gray-400 text-sm leading-relaxed">
+                <p className="mt-6 max-w-xl mx-auto text-[#8b97a8] text-sm leading-relaxed">
                     {dataDashboard.init.description}
                 </p>
             </section>

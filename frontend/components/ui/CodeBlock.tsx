@@ -6,7 +6,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function CodeBlock({ code, language = 'javascript' }) {
   return (
-    <div className="code-box w-full">
+    <div className="w-full">
       <SyntaxHighlighter
         language={language}
         style={vscDarkPlus}
