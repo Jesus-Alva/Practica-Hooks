@@ -84,6 +84,12 @@
     }
   },
   "useState": {
+    "explanation": {
+      "title": "useState - Estado local",
+      "fileName": "hook useState",
+      "description": "useState añade una variable de estado a tu componente. Devuelve un array con dos elementos: el valor actual y una función para actualizarlo.",
+      "example": "const [element, setElement] = useState(type);"
+    },
     "easy": {
       "products": [
         {

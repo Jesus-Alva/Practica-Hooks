@@ -37,7 +37,7 @@ export default ToggleButton;
                 <div
                     onClick={() => setOn(!on)}
                     className={`
-                            relative w-20 h-10 rounded-full cursor-pointer transition-all duration-300 mx-auto
+                            relative w-20 h-10 shadow-lg hover:scale-105 transform rounded-full cursor-pointer transition-all duration-300 mx-auto
                             ${on ? 'bg-green-400 shadow-inner' : 'bg-gray-300 shadow-inner'}
                         `}
                 >

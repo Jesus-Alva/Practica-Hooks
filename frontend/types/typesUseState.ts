@@ -11,3 +11,14 @@ export interface products {
     stock: number;
     images: image[];
 }
+
+export interface explanation {
+    title: string;
+    fileName: string;
+    description: string;
+    example: string;
+}
+export interface state {
+    explanation: explanation;
+    products: products;
+}
