@@ -150,5 +150,13 @@
         }
       ]
     }
+  },
+  "useEffect":{
+    "explanation": {
+      "title": "useEffect - Efectos Secundarios",
+      "fileName": "hook useEffect",
+      "description": "useEffect ejecuta código después de cada renderizado (o cuando cambian ciertas dependencias). Se usa para llamadas a APIs, suscripciones, timers, etc.",
+      "example": ""
+    }
   }
 }

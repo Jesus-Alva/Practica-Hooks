@@ -1,7 +1,7 @@
 "use client";
 
 import { CodeText } from "../../ui/CodeText";
-import { explanation } from "../../../types/typesUseState";
+import { explanation } from "../../../types/typesUseEffect";
 
 interface ComponentProps {
     data: explanation
