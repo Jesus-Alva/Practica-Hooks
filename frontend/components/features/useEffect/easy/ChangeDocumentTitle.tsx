@@ -15,7 +15,7 @@ const ChangeDocumentTitle: React.FC = () => {
 import { useEffect } from "react";
 
 const BasicCounter: React.FC = () => {
-    //
+    
     useEffect(() => {
         document.title = "# de clics"
     }, [parametro que lanzara el evento al cambiar])

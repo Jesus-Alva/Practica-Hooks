@@ -3,6 +3,7 @@
 import { useTranslation } from "../../../lib/hooks/useTranslation";
 import ExplanationComponent from "../../../components/layouts/useState/ExplanationComponent";
 import ChangeDocumentTitle from "../../../components/features/useEffect/easy/ChangeDocumentTitle";
+import APIConsumption from "../../../components/features/useEffect/easy/APIConsumption";
 
 import { effect } from "../../../types/typesUseEffect";
 
@@ -17,6 +18,8 @@ const Page: React.FC = () => {
                 <ExplanationComponent data={dataEffect.explanation}/>
 
                 <ChangeDocumentTitle />
+
+                <APIConsumption />
             </div>
         </div>
     )
