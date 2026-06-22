@@ -157,6 +157,36 @@
       "fileName": "hook useEffect",
       "description": "useEffect ejecuta código después de cada renderizado (o cuando cambian ciertas dependencias). Se usa para llamadas a APIs, suscripciones, timers, etc.",
       "example": ""
+    },
+    "middleContent": {
+      "exercise_1":{
+
+      },
+      "exercise_2":{
+
+      },
+      "exercise_3":{
+
+      },
+      "exercise_4": {
+        "title": "Ejercicio 4 - Búsqueda con Debounce",
+        "chalenge": "Reto: El objetivo es simular un buscador, ingresa un texto y haz que la frase a buscar aparezca despues de medio segundo."
+      },
+      "exercise_5":{
+
+      },
+      "exercise_6":{
+
+      },
+      "exercise_7":{
+
+      },
+      "exercise_8":{
+
+      },
+      "exercise_9":{
+
+      }
     }
   }
 }
