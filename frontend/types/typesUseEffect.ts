@@ -3,6 +3,8 @@ export interface explanation {
     fileName: string;
     description: string;
     example: string;
+    pathern: string;
+    aplication: string[];
 }
 
 export interface content {

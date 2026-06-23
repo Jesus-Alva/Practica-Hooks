@@ -33,7 +33,7 @@ const DarkMode: React.FC<ComponentProps> = ({ data }) => {
     const codeTxt = `
 import { useState, useEffect } from "react";
 
-export default function TemaOscuro() { 
+const DarkMode: React.FC = () => { 
     const [oscuro, setOscuro] = useState(() => {
         return localStorage.getItem("tema") === "oscuro";
     });
@@ -50,6 +50,8 @@ export default function TemaOscuro() {
         </button>
     );
 }
+
+export default DarkMode;
     `
     return (
         <div className="border border-gray-200 flex align-middle">

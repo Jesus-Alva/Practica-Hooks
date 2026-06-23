@@ -22,7 +22,7 @@ const Page: React.FC = () => {
 
                 <DarkMode data={dataMiddle.middleContent.exercise_5}/>
                 
-
+                
             </div>
         </div>
     )

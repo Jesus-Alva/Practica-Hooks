@@ -15,6 +15,12 @@ const ExplanationComponent: React.FC<ComponentProps> = ({data}) => {
                 <div className="grid grid-cols-1">
                     <span className="text-start">{data?.description}</span>
                     <span className="text-start my-2">{data?.example}</span>
+                    <span className="text-start font-bold my-2">Se utiliza para:</span>
+                     <ul className="text-start">
+                        {data.aplication.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
                 </div>
             </CodeText>
         </div>

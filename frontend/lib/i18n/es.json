@@ -87,8 +87,13 @@
     "explanation": {
       "title": "useState - Estado local",
       "fileName": "hook useState",
+      "pathern": "React.js",
       "description": "useState añade una variable de estado a tu componente. Devuelve un array con dos elementos: el valor actual y una función para actualizarlo.",
-      "example": "const [element, setElement] = useState(type);"
+      "example": "const [element, setElement] = useState(type);",
+      "aplication": [
+        "Manejar cualquier valor que cambie con el tiempo: contadores, formularios, interruptores, datos de API, carritos de compra.", 
+        "Estados simples como booleanos, números o strings; también objetos y arrays (actualizando de forma inmutable)."
+      ]
     },
     "easy": {
       "products": [
@@ -155,8 +160,14 @@
     "explanation": {
       "title": "useEffect - Efectos Secundarios",
       "fileName": "hook useEffect",
-      "description": "useEffect ejecuta código después de cada renderizado (o cuando cambian ciertas dependencias). Se usa para llamadas a APIs, suscripciones, timers, etc.",
-      "example": ""
+      "pathern": "React.js",
+      "description": "Ejecuta efectos secundarios después de cada renderizado (o cuando cambien ciertas dependencias). Puede retornar una función de limpieza que se ejecuta antes de que el componente se desmonte o antes de volver a ejecutar el efecto.",
+      "aplication": [
+        "Peticiones a APIs.", "Suscripciones a eventos (teclado, resize, visibilidad, etc.).", 
+        "Sincronización con localStorage o el DOM.", 
+        "Timers (setTimeout, setInterval).", 
+        "Integración con librerías de terceros."
+      ]
     },
     "middleContent": {
       "exercise_1":{
@@ -177,7 +188,8 @@
         "chalenge": "Reto: Persiste un tema oscuro/claro en localStorage. Al cargar, lee el valor guardado y aplica la clase al body. Actualiza el storage en cada cambio."
       },
       "exercise_6":{
-        
+        "title": "Ejercicio 6 - Detectar estado de conexión (online/offline)",
+        "chalenge": "Escucha eventos online/offline y actualiza el estado de conectividad. Limpia los listeners al desmontar."
       },
       "exercise_7":{
 
@@ -188,6 +200,133 @@
       "exercise_9":{
 
       }
+    }
+  },
+  "useContext": {
+    "explanation": {
+      "title": "useContext",
+      "fileName": "hook useContext",
+      "pathern": "React.js",
+      "description": "Consume un contexto de React creado con createContext. Permite acceder a un valor compartido sin necesidad de pasar props manualmente a través de cada nivel del árbol de componentes.",
+      "example": "",
+      "aplication": [
+        "Compartir información global: tema (claro/oscuro), idioma, datos del usuario autenticado, carrito de compras, notificaciones.", 
+        "Evitar el “prop drilling” en aplicaciones con muchos niveles de anidamiento."
+      ]
+    }
+  },
+  "useRef": {
+    "explanation": {
+      "title": "useRef",
+      "fileName": "hook useRef",
+      "pathern": "React.js",
+      "description": "Crea un objeto mutable con una propiedad .current que persiste durante toda la vida del componente. A diferencia del estado, modificar .current no provoca un nuevo renderizado.",
+      "example": "",
+      "aplication": [
+        "Acceder y manipular elementos del DOM directamente (enfocar inputs, medir dimensiones, animaciones).", 
+        "Almacenar valores que deben persistir entre renders sin causar re‑render (IDs de intervalos, contadores de renders, valores anteriores).",
+        "Referencias para integrar librerías externas que necesitan un nodo DOM."
+      ]
+    }
+  },
+  "useReducer": {
+    "explanation": {
+      "title": "useReducer",
+      "fileName": "hook useReducer",
+      "pathern": "React.js",
+      "description": "Alternativa a useState para manejar estados complejos. Recibe una función reductora (state, action) => newState y un estado inicial. Devuelve el estado actual y una función dispatch para enviar acciones.",
+      "example": "const [element, setElement] = useState(type);",
+      "aplication": [
+        "Estados con múltiples subvalores que cambian juntos (formularios, carritos).", 
+        "Lógica de actualización compleja que depende de acciones bien definidas (agregar, eliminar, vaciar).",
+        "Cuando varias actualizaciones comparten lógica repetitiva.",
+        "Implementar patrones como undo/redo."
+      ]
+    }
+  },
+  "useMemo": {
+    "explanation": {
+      "title": "useMemo",
+      "fileName": "hook useMemo",
+      "pathern": "React.js",
+      "description": "Memoriza un valor calculado y solo lo recalcula si alguna de sus dependencias cambia. Ayuda a evitar cálculos costosos en cada render.",
+      "example": "",
+      "aplication": [
+        "Filtrar, ordenar o transformar arrays grandes.", 
+        "Calcular totales o estadísticas a partir de datos.",
+        "Crear objetos de configuración estables que se pasan a componentes hijos o librerías.", 
+        "COptimizar renders al evitar la creación de nuevas referencias innecesarias."
+      ]
+    }
+  },
+  "useCallback": {
+    "explanation": {
+      "title": "useCallback",
+      "fileName": "hook useCallback",
+      "pathern": "React.js",
+      "description": "Memoriza una función y devuelve la misma instancia mientras sus dependencias no cambien. Es el equivalente a useMemo para funciones.",
+      "example": "",
+      "aplication": [
+        "Pasar funciones estables a componentes hijos optimizados con React.memo para evitar renders innecesarios.", 
+        "Funciones que se usan como dependencia en useEffect (para no disparar efectos de nuevo).",
+        "Handlers de eventos que se crean dentro del componente y que de otro modo cambiarían en cada render."
+      ]
+    }
+  },
+  "useRoute": {
+    "explanation": {
+      "title": "useRoute",
+      "fileName": "hook useRoute",
+      "pathern": "Next.js",
+      "description": "Proporciona el objeto router que permite navegar programáticamente entre rutas, refrescar la página actual y otras utilidades de enrutamiento.",
+      "example": "",
+      "aplication": [
+        "Redirigir al usuario tras un login, envío de formulario o acción exitosa.", 
+        "ECambiar la URL sin necesidad de un enlace (router.push, router.replace).",
+        "Forzar una actualización de datos del servidor con router.refresh()."
+      ]
+    }
+  },
+  "usePathname": {
+    "explanation": {
+      "title": "usePathname",
+      "fileName": "hook usePathname",
+      "pathern": "Next.js",
+      "description": "Devuelve la ruta actual (pathname) como string, ej. /productos/123. Es una forma sencilla de leer la URL activa.",
+      "example": "const [element, setElement] = useState(type);",
+      "aplication": [
+        "Resaltar el enlace activo en menús de navegación.", 
+        "Activar lógica condicional según la página en la que se encuentra el usuario.",
+        "Construir breadcrumbs dinámicos."
+      ]
+    }
+  },
+  "useSearchParams": {
+    "explanation": {
+      "title": "useSearchParams",
+      "fileName": "hook useSearchParams",
+      "pathern": "Next.js",
+      "description": "Proporciona acceso de lectura a los parámetros de búsqueda (query string) de la URL actual. Devuelve un objeto URLSearchParams que permite leer valores con .get().",
+      "example": "",
+      "aplication": [
+        "Leer filtros, ordenaciones o términos de búsqueda desde la URL (ej. ?categoria=ropa&orden=asc).", 
+        "Sincronizar el estado de la UI con los parámetros de búsqueda.",
+        "Implementar paginación o tabs que persisten en la URL."
+      ]
+    }
+  },
+  "useParams": {
+    "explanation": {
+      "title": "useState - Estado local",
+      "fileName": "hook useState",
+      "pathern": "Next.js",
+      "description": "Devuelve un objeto con los parámetros dinámicos de la ruta actual. Para una ruta como /productos/[id], useParams() retorna { id: 123 }.",
+      "example": "const [element, setElement] = useState(type);",
+      "aplication": [
+        "Obtener el identificador de una página de detalle para cargar el recurso correspondiente", 
+        "Leer segmentos dinámicos en rutas anidadas.",
+        "Combinar con useEffect para hacer fetch de datos basados en el parámetro de la URL."
+      ]
     }
   }
 }
