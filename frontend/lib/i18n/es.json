@@ -173,10 +173,11 @@
         "chalenge": "Reto: El objetivo es simular un buscador, ingresa un texto y haz que la frase a buscar aparezca despues de medio segundo."
       },
       "exercise_5":{
-
+        "title": "Ejercicio 5 - Sincronización con localStorage",
+        "chalenge": "Reto: Persiste un tema oscuro/claro en localStorage. Al cargar, lee el valor guardado y aplica la clase al body. Actualiza el storage en cada cambio."
       },
       "exercise_6":{
-
+        
       },
       "exercise_7":{
 

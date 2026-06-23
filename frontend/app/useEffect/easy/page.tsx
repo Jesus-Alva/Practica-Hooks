@@ -14,7 +14,7 @@ const Page: React.FC = () => {
     const dataEffect = t("useEffect", {returnObjects: true}) as effect;
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-300">
+        <div className="">
             <div className="container mx-auto px-4 py-16 text-center">
                 <ExplanationComponent data={dataEffect.explanation}/>
 

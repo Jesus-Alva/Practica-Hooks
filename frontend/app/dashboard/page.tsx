@@ -12,7 +12,7 @@ const Page: React.FC = () => {
     const title = dataDashboard.init.title.split(':')
 
     return (
-        <div className="min-h-screen bg-[#0a0e14] font-mono text-[#c8d3e0] selection:bg-emerald-400/20">
+        <div className="selection:bg-emerald-400/20">
 
             {/* Hero */}
             <section className="container mx-auto px-4 pt-24 pb-20 text-center">
