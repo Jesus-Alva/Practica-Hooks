@@ -189,7 +189,7 @@
       },
       "exercise_6":{
         "title": "Ejercicio 6 - Detectar estado de conexión (online/offline)",
-        "chalenge": "Escucha eventos online/offline y actualiza el estado de conectividad. Limpia los listeners al desmontar."
+        "chalenge": "Reto: Escucha eventos online/offline y actualiza el estado de conectividad. Limpia los listeners al desmontar."
       },
       "exercise_7":{
 

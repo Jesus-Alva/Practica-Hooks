@@ -7,10 +7,10 @@ import ExplanationComponent from "../../../components/layouts/useState/Explanati
 import DarkMode from "../../../components/features/useEffect/middle/DarkMode";
 
 import { effect } from "../../../types/typesUseEffect";
+import StateConection from "../../../components/features/useEffect/middle/StateConection";
 
 const Page: React.FC = () => {
     const {t} = useTranslation();
-
     const dataMiddle = t("useEffect", {returnObjects: true}) as effect
 
     return (
@@ -22,7 +22,7 @@ const Page: React.FC = () => {
 
                 <DarkMode data={dataMiddle.middleContent.exercise_5}/>
                 
-                
+                <StateConection data={dataMiddle.middleContent.exercise_6}/>
             </div>
         </div>
     )
