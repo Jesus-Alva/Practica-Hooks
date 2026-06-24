@@ -27,5 +27,5 @@ interface exercise {
 
 export interface effect {
     explanation: explanation;
-    middleContent: exercise;
+    excercises: exercise;
 }

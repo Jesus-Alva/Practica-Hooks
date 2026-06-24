@@ -18,11 +18,11 @@ const Page: React.FC = () => {
             <div className="container mx-auto px-4 py-16 text-center">
                 <ExplanationComponent data={dataMiddle.explanation}/>
 
-                <SearchDebounce data={dataMiddle.middleContent.exercise_4} />
+                <SearchDebounce data={dataMiddle.excercises.exercise_4} />
 
-                <DarkMode data={dataMiddle.middleContent.exercise_5}/>
+                <DarkMode data={dataMiddle.excercises.exercise_5}/>
                 
-                <StateConection data={dataMiddle.middleContent.exercise_6}/>
+                <StateConection data={dataMiddle.excercises.exercise_6}/>
             </div>
         </div>
     )
